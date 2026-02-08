@@ -1,4 +1,4 @@
-const cardsContainer = document.querySelector('.rooms__cards-list');
+const cardsContainer = document.querySelector('.rooms__cards-wrapper');
 const cards = document.querySelectorAll('.card-room');
 const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 let activeCard = null;

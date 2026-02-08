@@ -3,6 +3,7 @@
   display: grid;
   width: 100%;
   height: auto;
+  flex: 0 0 372px;
   overflow: hidden;
   border-radius: 10px;
   text-decoration: none;
@@ -10,10 +11,12 @@
   transition: box-shadow 0.3s ease;
 
   @include vp-1279 {
+    flex: 0 0 336px;
     min-height: 420px;
   }
 
   @include vp-767 {
+    flex: 0 0 288px;
     min-height: 347px;
   }
 
@@ -163,7 +166,7 @@
 
 .card-room__order {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 180px;
   padding-top: 17px;
 
   @include vp-1279 {
@@ -245,6 +248,8 @@
   font-weight: 700;
   color: $color-main;
   text-align: center;
+  min-width: 180px;
+  width: 100%;
   height: min-content;
   padding: 11px 24px 13px 25px;
   background-color: $color-btn;
@@ -274,6 +279,13 @@
   &:active {
     background-color: $color-btn-active;
     color: $color-pressed;
+  }
+
+  &:disabled,
+  &.unavailable {
+    background-color: $color-gray;
+    color: rgba($color-main, 0.6);
+    cursor: not-allowed;
   }
 }
 
