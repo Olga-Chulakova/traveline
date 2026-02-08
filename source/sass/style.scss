@@ -1,4 +1,19 @@
-// Vendor
-// ---------------------------------
+/* VENDOR */
 
 @import "vendor/normalize";
+
+/* GLOBAL */
+
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/container";
+@import "./global/visually-hidden";
+
+/* BLOCKS */
+
+@import "./blocks/list-reset";
+@import "./blocks/rooms";
+@import "./blocks/card-room";
+@import "./blocks/promo-badge";

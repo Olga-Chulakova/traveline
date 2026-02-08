@@ -1,0 +1,318 @@
+.card-room {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+  color: $color-main;
+  transition: box-shadow 0.3s ease;
+
+  @include vp-1279 {
+    min-height: 420px;
+  }
+
+  @include vp-767 {
+    min-height: 347px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  &--promo-badge:hover .promo-badge {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--promo-badge:has(.card-room__popup.is-active):hover .promo-badge {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.card-room__image,
+.card-room__content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-room__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  background-color: $color-bg-img;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, rgba(10, 34, 64, 1) 100%);
+    z-index: 2;
+    border-radius: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.card-room__content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 22px;
+  z-index: 3;
+
+  @include vp-1279 {
+    padding: 24px;
+  }
+}
+
+.card-room__text {
+  padding-bottom: 20px;
+  margin-top: auto;
+  border-bottom: 1px solid $color-line;
+
+  @include vp-1279 {
+    padding-bottom: 21px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-room__title-link {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 9px;
+  color: $color-main;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 1px;
+    background-color: $color-main;
+    transition: width 0.3s ease, left 0.3s ease;
+
+    @include vp-1279 {
+      content: none;
+    }
+  }
+
+  @include vp-767 {
+    margin: 0 0 10px;
+  }
+
+  h2 {
+    font-family: $roboto;
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 700;
+    margin: 0;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    content: none;
+  }
+
+  &:focus {
+    outline: 1px solid transparent;
+  }
+
+  &:focus-visible::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.card-room__order {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding-top: 17px;
+
+  @include vp-1279 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.card-room__price-block p {
+  margin: 0;
+}
+
+.card-room__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.card-room__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+
+  @include vp-767 {
+    gap: 4px;
+  }
+
+  p {
+    font-family: $roboto;
+    font-size: 19px;
+    line-height: 1.26;
+    font-weight: 700;
+    text-transform: lowercase;
+
+    @include vp-767 {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+  }
+
+  span {
+    font-family: $roboto;
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 700;
+    color: $color-highlight;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+
+  span:last-of-type {
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $color-price;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+}
+
+.card-room__button {
+  align-self: flex-end;
+  margin-bottom: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.5;
+  font-weight: 700;
+  color: $color-main;
+  text-align: center;
+  height: min-content;
+  padding: 11px 24px 13px 25px;
+  background-color: $color-btn;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  @include vp-1279 {
+    margin: 0;
+    align-self: unset;
+  }
+
+  @include vp-767 {
+    padding: 8px 24px 10px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-btn-active;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+    color: $color-pressed;
+  }
+}
+
+.card-room__popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 3;
+  transition: max-height 0.3s ease;
+}
+
+.card-room__popup.is-active {
+  max-height: 100%;
+}
+
+.card-room__info {
+  padding: 25px 25px 29px;
+  margin-top: auto;
+  background-color: $color-gray;
+}
+
+.card-room__reserved,
+.card-room__pay {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card-room__link-pay {
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-highlight;
+  font-weight: 700;
+}

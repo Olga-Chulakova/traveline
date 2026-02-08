@@ -1,0 +1,9 @@
+$roboto: "Roboto", "Arial", sans-serif;
+$open-sans: "Open Sans", "Arial", sans-serif;
+$arial: "Arial", sans-serif;
+
+@include font-face("Roboto", 700, normal, url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"));
+@include font-face("Roboto", 500, normal, url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff2") format("woff"));
+@include font-face("Roboto", 400, normal, url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff2") format("woff"));
+@include font-face("Open Sans", 700, normal, url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff2") format("woff"));
+@include font-face("Open Sans", 400, normal, url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff2") format("woff"));
