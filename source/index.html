@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TravelLine</title>
+  <title>Номера и цены гостиницы в официальном сайте</title>
   <link rel="preload" href="fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Roboto-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -24,115 +24,135 @@
       <div class="rooms__geeral-wrapper container">
         <h1 class="rooms__title">Номера и цены</h1>
         <div class="rooms__cards-wrapper">
-          <div class="card-room">
-            <div class="card-room__image">
-              <picture>
-                <source srcset="img/lux-room@1x.webp 1x, img/lux-room@2x.webp 2x" type="image/webp" width="372" height="372">
-                <img src="img/lux-room@1x.jpg" srcset="img/lux-room@2x.jpg 2x" width="372" height="372" alt="Номер отеля Люкс">
-              </picture>
-            </div>
-            <div class="card-room__content">
-              <div class="card-room__text">
-                <a class="card-room__title-link" href="#">
-                  <h2>Представительский люкс</h2>
-                </a>
-                <p>Эксклюзивный номер с панорамным видом на центр города Москвы</p>
-              </div>
-              <div class="card-room__order">
-                <div class="card-room__price-block">
-                  <p class="card-room__desc">Цена за сутки</p>
-                  <div class="card-room__price">
-                    <p>от</p>
-                    <span>7 900</span>
-                    <span>₽</span>
+          <ul class="rooms__cards-list list-reset">
+            <li class="rooms__card-item">
+              <div class="card-room">
+                <div class="card-room__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/lux-mobile@1x.webp 1x, img/lux-mobile@2x.webp 2x" type="image/webp" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/lux-tablet@1x.webp 1x, img/lux-tablet@2x.webp 2x" type="image/webp" width="336" height="420">
+                    <source srcset="img/lux-desktop@1x.webp, img/lux-desktop@2x.webp 2x" type="image/webp" width="372" height="372">
+                    <source media="(max-width: 767px)" srcset="img/lux-mobile@1x.jpg 1x, img/lux-mobile@2x.jpg 2x" type="image/jpg" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/lux-tablet@1x.jpg 1x, img/lux-tablet@2x.jpg 1x 2x" type="image/jpg" width="336" height="420">
+                    <img src="img/lux-desktop@1x.jpg" srcset="img/lux-desktop@2x.jpg 2x" width="372" height="372" alt="Номер отеля Представительский люкс">
+                  </picture>
+                </div>
+                <div class="card-room__content">
+                  <div class="card-room__text">
+                    <a class="card-room__title-link" href="#">
+                      <h2>Представительский люкс</h2>
+                    </a>
+                    <p>Эксклюзивный номер с панорамным видом на центр города Москвы</p>
+                  </div>
+                  <div class="card-room__order">
+                    <div class="card-room__price-block">
+                      <p class="card-room__desc">Цена за сутки</p>
+                      <div class="card-room__price">
+                        <p>от</p>
+                        <span>7 900</span>
+                        <span>₽</span>
+                      </div>
+                    </div>
+                    <button class="card-room__button" type="button">Забронировать</button>
                   </div>
                 </div>
-                <button class="card-room__button" type="button">Забронировать</button>
-              </div>
-            </div>
-            <div class="card-room__popup">
-              <div class="card-room__info">
-                <p class="card-room__reserved">Номер зарезервирован</p>
-                <p class="card-room__pay">Перейти к <a class="card-room__link-pay" href="#" tabindex="-1" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="card-room card-room--promo-badge">
-            <div class="card-room__image">
-              <picture>
-                <source srcset="img/duplex@1x.webp 1x, img/duplex@2x.webp 2x" type="image/webp" width="372" height="372">
-                <img src="img/duplex@1x.jpg" srcset="img/duplex@2x.jpg 2x" width="372" height="372" alt="Номер отеля Дуплекс">
-              </picture>
-            </div>
-            <div class="card-room__content">
-              <div class="promo-badge">
-                <div class="promo-badge__body">
-                  <span class="promo-badge__text">Гарантия лучшей цены!</span>
-                </div>
-                <div class="promo-badge__corner">
-                  <svg width="36" height="30" aria-hidden="true" focusable="false">
-                    <use href="#icon-promo-corner"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="card-room__text">
-                <a class="card-room__title-link" href="#">
-                  <h2>Дуплекс</h2>
-                </a>
-                <p>Просторный двухкомнатный номер с шикарным видом на парк</p>
-              </div>
-              <div class="card-room__order">
-                <div class="card-room__price-block">
-                  <p class="card-room__desc">Цена за сутки</p>
-                  <div class="card-room__price">
-                    <p>от</p>
-                    <span>5 700</span>
-                    <span>₽</span>
+                <div class="card-room__popup">
+                  <div class="card-room__info">
+                    <p class="card-room__reserved">Номер зарезервирован</p>
+                    <p class="card-room__pay">Перейти к <a class="card-room__link-pay" href="#" tabindex="-1" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
                   </div>
                 </div>
-                <button class="card-room__button" type="button">Забронировать</button>
               </div>
-            </div>
-            <div class="card-room__popup">
-              <div class="card-room__info">
-                <p class="card-room__reserved">Номер зарезервирован</p>
-                <p class="card-room__pay">Перейти к <a class="card-room__link-pay" href="#" tabindex="-1" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="card-room">
-            <div class="card-room__image">
-              <picture>
-                <source srcset="img/bussines-lux-room@1x.webp 1x, img/bussines-lux-room@2x.webp 2x" type="image/webp" width="372" height="372">
-                <img src="img/bussines-lux-room@1x.jpg" srcset="img/bussines-lux-room@2x.jpg 2x" width="372" height="372" alt="Номер отеля Бизнесс-Люкс">
-              </picture>
-            </div>
-            <div class="card-room__content">
-              <div class="card-room__text">
-                <a class="card-room__title-link" href="#">
-                  <h2>Бизнес-люкс</h2>
-                </a>
-                <p>Трёхкомнатный номер с панорамным видом на Москва-реку</p>
-              </div>
-              <div class="card-room__order">
-                <div class="card-room__price-block">
-                  <p class="card-room__desc">Цена за сутки</p>
-                  <div class="card-room__price">
-                    <p>от</p>
-                    <span>4 900</span>
-                    <span>₽</span>
+            </li>
+            <li class="rooms__card-item">
+              <div class="card-room card-room--promo-badge">
+                <div class="card-room__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/duplex-mobile@1x.webp 1x, img/duplex-mobile@2x.webp 2x" type="image/webp" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/duplex-tablet@1x.webp 1x, img/duplex-tablet@2x.webp 2x" type="image/webp" width="336" height="420">
+                    <source srcset="img/duplex-desktop@1x.webp, img/duplex-desktop@2x.webp 2x" type="image/webp" width="372" height="372">
+                    <source media="(max-width: 767px)" srcset="img/duplex-mobile@1x.jpg 1x, img/duplex-mobile@2x.jpg 2x" type="image/jpg" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/duplex-tablet@1x.jpg 1x, img/duplex-tablet@2x.jpg 1x 2x" type="image/jpg" width="336" height="420">
+                    <img src="img/duplex-desktop@1x.jpg" srcset="img/duplex-desktop@2x.jpg 2x" width="372" height="372" alt="Номер отеля Дуплекс">
+                  </picture>
+                </div>
+                <div class="card-room__content">
+                  <div class="promo-badge">
+                    <div class="promo-badge__body">
+                      <span class="promo-badge__text">Гарантия лучшей цены!</span>
+                    </div>
+                    <div class="promo-badge__corner">
+                      <svg width="36" height="30" aria-hidden="true" focusable="false">
+                        <use href="#icon-promo-corner"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-room__text">
+                    <a class="card-room__title-link" href="#">
+                      <h2>Дуплекс</h2>
+                    </a>
+                    <p>Просторный двухкомнатный номер с шикарным видом на парк</p>
+                  </div>
+                  <div class="card-room__order">
+                    <div class="card-room__price-block">
+                      <p class="card-room__desc">Цена за сутки</p>
+                      <div class="card-room__price">
+                        <p>от</p>
+                        <span>5 700</span>
+                        <span>₽</span>
+                      </div>
+                    </div>
+                    <button class="card-room__button" type="button">Забронировать</button>
                   </div>
                 </div>
-                <button class="card-room__button" type="button">Забронировать</button>
+                <div class="card-room__popup">
+                  <div class="card-room__info">
+                    <p class="card-room__reserved">Номер зарезервирован</p>
+                    <p class="card-room__pay">Перейти к <a class="card-room__link-pay" href="#" tabindex="-1" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card-room__popup">
-              <div class="card-room__info">
-                <p class="card-room__reserved">Номер зарезервирован</p>
-                <p class="card-room__pay">Перейти к <a class="card-room__link-pay" tabindex="-1" href="#" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
+            </li>
+            <li class="rooms__card-item">
+              <div class="card-room">
+                <div class="card-room__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/business-mobile@1x.webp 1x, img/business-mobile@2x.webp 2x" type="image/webp" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/business-tablet@1x.webp 1x, img/business-tablet@2x.webp 2x" type="image/webp" width="336" height="420">
+                    <source srcset="img/business-desktop@1x.webp, img/business-desktop@2x.webp 2x" type="image/webp" width="372" height="372">
+                    <source media="(max-width: 767px)" srcset="img/business-mobile@1x.jpg 1x, img/business-mobile@2x.jpg 2x" type="image/jpg" width="288" height="347">
+                    <source media="(max-width: 1279px)" srcset="img/business-tablet@1x.jpg 1x, img/business-tablet@2x.jpg 1x 2x" type="image/jpg" width="336" height="420">
+                    <img src="img/business-desktop@1x.jpg" srcset="img/business-desktop@2x.jpg 2x" width="372" height="372" alt="Номер отеля Бизнес-люкс">
+                  </picture>
+                </div>
+                <div class="card-room__content">
+                  <div class="card-room__text">
+                    <a class="card-room__title-link" href="#">
+                      <h2>Бизнес-люкс</h2>
+                    </a>
+                    <p>Трёхкомнатный номер с панорамным видом на <br>Москва-реку</p>
+                  </div>
+                  <div class="card-room__order">
+                    <div class="card-room__price-block">
+                      <p class="card-room__desc">Цена за сутки</p>
+                      <div class="card-room__price">
+                        <p>от</p>
+                        <span>4 900</span>
+                        <span>₽</span>
+                      </div>
+                    </div>
+                    <button class="card-room__button" type="button">Забронировать</button>
+                  </div>
+                </div>
+                <div class="card-room__popup">
+                  <div class="card-room__info">
+                    <p class="card-room__reserved">Номер зарезервирован</p>
+                    <p class="card-room__pay">Перейти к <a class="card-room__link-pay" tabindex="-1" href="#" aria-label="Ссылка для оплаты бронированного номера на сайте">оплате</a></p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
