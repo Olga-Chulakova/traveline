@@ -2,18 +2,22 @@
   display: flex;
   align-items: center;
   margin: 0 0 8px;
+
   opacity: 0;
   visibility: hidden;
+
   transition: opacity 0.3s ease, visibility 0.3s ease;
+
   pointer-events: none;
 }
 
 .promo-badge__body {
-  padding: 4px 4px 5px 16px;
-  border-radius: 3px 0 0 3px;
-  background-color: $color-badge;
-  max-width: 177px;
   width: 100%;
+  max-width: 177px;
+  padding: 4px 4px 5px 16px;
+
+  background-color: $color-badge;
+  border-radius: 3px 0 0 3px;
 }
 
 .promo-badge__text {
@@ -24,9 +28,10 @@
 }
 
 .promo-badge__corner {
+  flex-shrink: 0;
   width: auto;
   height: 100%;
-  flex-shrink: 0;
+
   color: $color-badge;
 
   svg {

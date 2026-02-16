@@ -31,9 +31,11 @@ const initPopup = () => {
     if (e.target.closest('.card-room')) {
       const card = e.target.closest('.card-room');
       const popup = card.querySelector('.card-room__popup');
+      const payLink = card.querySelector('.card-room__link-pay');
 
       if (popup.classList.contains('is-active')) {
         closePopup(popup);
+        payLink.setAttribute('tabindex', '-1');
       }
     }
   });
@@ -43,8 +45,10 @@ const initPopup = () => {
       card.addEventListener('mouseleave', () => {
         if (activeCard === card) {
           const popup = card.querySelector('.card-room__popup');
+          const payLink = card.querySelector('.card-room__link-pay');
           if (popup) {
             openPopup(popup);
+            payLink.setAttribute('tabindex', '0');
           }
           activeCard = null;
         }
